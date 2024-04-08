@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
- class CameraFollow : MonoBehaviour
+ class CameraFollow : 
 {
     //Vehicle game object to follow
     [SerializeField] private GameObject player;
