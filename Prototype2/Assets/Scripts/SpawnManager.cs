@@ -1,11 +1,11 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
+using System.Collections;
 using UnityEngine;
 
 public class SpawnManager : MonoBehaviour
 {
     //animal prefabs
-    public GameObject[] animalPrefabs;
+    [Serialize Field] private GameObject[] animalPrefabs;
     //x range
     private float spawnRangeX = 20.0f;
     //z position
@@ -19,8 +19,9 @@ public class SpawnManager : MonoBehaviour
     //Start is called before the first frame
     void Start()
     {
-        InvokeRepeating("SpawnRandomAnimal", startDelay, spawnInterval);
+        InvokeRepeating(spawnmethodName, startDelay, spawnInterval);
     }
+    private const string spawnmethodName = "spawnRandomAnimal";
 
     //Method to spawn animals
     private void SpawnRandomAnimal()
