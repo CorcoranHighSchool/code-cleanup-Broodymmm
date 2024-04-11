@@ -16,7 +16,7 @@ public class SpawnManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        InvokeRepeating("SpawnObstacle", spawnDelay, spawnRate);
+        InvokeRepeating(SpawnObstacle, spawnDelay, spawnRate);
     }
 
     private void SpawnObstacle()
